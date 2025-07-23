@@ -1,0 +1,31 @@
+{
+  "name": "prompt-engineering-techniques",
+  "version": "1.0.0",
+  "description": "A collection of prompt engineering techniques for AI models.",
+  "author": "Wamaitha Nyamu",
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": " "
+  },
+  "keywords": [
+    "AI",
+    "prompt-engineering",
+    "techniques",
+    "google-genai"
+  ],
+  "main": "index.ts",
+  "scripts": {
+    "start": "ts-node index.ts",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1" 
+  },
+  "dependencies": {
+    "@google/genai": "^1.10.0",
+    "dotenv": "^17.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.1.0"
+  }
+}
