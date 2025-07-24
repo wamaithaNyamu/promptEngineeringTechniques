@@ -1,12 +1,32 @@
+import { PASTORSytemPrompt} from "./prompts/PASTOR";
+
 import { RACESystemPrompt } from "./prompts/RACE";
 import { generateGeminiResponse } from "./generatePrompt"; // Assuming this is the correct import for your function
 
 const exampleQuery1 = "Our telecom company is losing customers, and we want to understand who is likely to cancel their subscriptions so we can proactively offer them incentives to stay. How can we use our customer data to predict this?";
-const exampleQuery2 = "We're a retail chain struggling with inventory management. We often have too much stock of unpopular items and run out of popular ones. We need a way to predict demand for our products more accurately for the next three months to optimize our purchasing.";
+
+const exampleQuery2 = "Create a LinkedIn thread outline discussing the advantages of Natural Language Processing (NLP) for enhancing customer service automation for small to medium-sized business owners. The content should ask them to click the link in the comments"
+
+
 const exampleQuery3 = "Our online payment platform is experiencing an increase in fraudulent transactions. We need a system that can automatically identify suspicious transactions in real-time to prevent financial losses for our users and us.";
 
 
 async function main() {
+  
+  console.log("--- Running Example 2 ---");
+  console.log("Query:", exampleQuery2);
+
+  console.log("\n--- Example 2 (Without PASTOR System Prompt) ---");
+  const response2NoPASTORSystem = await generateGeminiResponse(exampleQuery2); // Pass empty string if no system prompt
+  console.log("Response:", response2NoPASTORSystem);
+
+  // Example 2 with the PASTORSytemPrompt
+  console.log("\n--- Example 2 (With PASTOR System Prompt) ---");
+  const response2WithPASTORSystem = await generateGeminiResponse(exampleQuery2, PASTORSytemPrompt);
+   console.log("Response:", response2WithPASTORSystem);
+
+
+
   console.log("--- Running Example 1 ---");
   console.log("Query:", exampleQuery1);
 

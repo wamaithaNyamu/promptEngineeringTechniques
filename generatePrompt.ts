@@ -21,10 +21,7 @@ export async function generateGeminiResponse(userQuery:string,systemPrompt:strin
     if (!response || !response.text) {
       throw new Error("No response text received from the model.");
     } 
-    // Log the response text
-    const content = response.text ?? ''
-    console.log("Generated Response:", content);
-    return content
+    return response.text ?? ''
   } catch (error) {
     console.error("Error generating content ", error);
     return '';
