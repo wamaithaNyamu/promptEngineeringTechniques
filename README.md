@@ -63,7 +63,7 @@ npm run start
 ### Roadmap
 
 - ✅ The R-A-C-E Prompting Framework
-- [ ] The P-A-S-T-O-R Prompting Framework
+- ✅ The P-A-S-T-O-R Prompting Framework
 - [ ] The R-I-S-E Prompting Framework
 - [ ] The S-T-A-R Prompting Framework
 - [ ] The S-O-A-P Prompting Framework
